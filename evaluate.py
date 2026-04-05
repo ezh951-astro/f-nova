@@ -133,6 +133,7 @@ def plot_evaluation_graph(model_name):
     axs[1,0].set_title('Temperature')
     axs[1,1].set_title('Velocity (combined)')
 
+    fig.supylabel("log10 valid VRMSE")
     fig.savefig(f"{gp.paths.plots}/fno_evals.png")
 
 
