@@ -1,0 +1,16 @@
+model:
+  n_modes: 16
+  n_layers: 4
+training:
+  batch_size: 2
+  max_epochs: 4
+  epoch_save: 1
+validation:
+  freq: 2
+  batch_size: 3
+preprocess:
+  norm_samples: 100
+  norm_cycle: 1
+base_split:
+  seed: 14383421
+  proportion: 0.4

@@ -1,0 +1,57 @@
+fno:
+  default:
+    model:
+      n_modes: 32
+      hidden_channels: 64
+      n_layers: 8
+      factorization: CP
+      factorize_rank: 32
+    training:
+      learn_rate: 5.0e-4
+      weight_decay: 1.e-4
+      batch_size: 4      # Do not set to 6 or 64
+      max_epochs: 120
+      epoch_save: 3
+      grad_max: 1.0
+      lr_decay_period: 8
+      lr_decay_gamma: 1.0
+    validation:
+      freq: 7
+      batch_size: 24     # Do not set to 6 or 64
+    preprocess:
+      log: True
+      asinh: True
+      norm_samples: 34000
+      norm_cycle: 53
+    base_split:
+      seed: 22691
+      proportion: 1.0
+    physics:
+      tune_start: 0
+      lambda_idg: 0
+      lambda_consv_mass: 0.0
+      lambda_consv_momentum: 0.0
+    autoregression:
+      order: 1      # Do not set to 6 or 64
+    logging:
+      steps_per_loss: 10
+      steps_per_grad: 500
+      epochs_per_eval: 1
+
+  lite_sample:
+    model:
+      n_modes: 16
+      n_layers: 4
+    training:
+      batch_size: 2
+      max_epochs: 2
+      epoch_save: 1
+    validation:
+      freq: 15
+      batch_size: 3
+    preprocess:
+      norm_samples: 100
+      norm_cycle: 1
+    base_split:
+      seed: 14383421
+      proportion: 0.4

@@ -1,0 +1,32 @@
+names:
+  wandb_project: <your WandB project name here>
+  wandb_entity: <your WandB entity name here>
+  email: <your email here>
+
+paths:
+  essential:
+    indiv_params: "configs/indiv"
+  global: # ensure no name conflicts with by_run
+    base_data: 'basedata/datasets'
+    statistics: 'auxdata/normtensor'
+    times: 'auxdata/times'
+    phase_data: 'auxdata/phase'
+  by_run:
+    models: 'models'
+    rollouts: 'inferred/rollouts'
+    residuals: 'inferred/residuals'
+    phase_inferred: 'inferred/phase'
+    plots: 'plots'
+
+data_summary: # fixed
+  dataset_name: "supernova_explosion_64"
+  n_fields: 6
+  n_times: 59
+  box_size: 64
+  box_dims: 3
+
+compute: # Used only by SLURM
+  gres: 1
+  cmem: 24  #GB
+  compute_hours: 72
+  conda_env: 'aloysius'
