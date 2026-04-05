@@ -78,12 +78,12 @@ are known to work on an NVIDIA RTX 3070 with 8 GB VRAM. A sample YAML file has a
 
 If using Docker, first run:
 
-Windows:
+Windows (cmd):
 ```cmd
 docker run --gpus all --shm-size=8g --rm -it -v %cd%:/app supernova
 ```
 
-Linux:
+Linux (bash):
 ```bash
 docker run --gpus all --shm-size=8g --rm -it -v $(pwd):/app supernova
 ```
