@@ -35,6 +35,7 @@ This codebase uses the [supernova_explosion_64](https://github.com/PolymathicAI/
 
 To download a small subset of the data, run the following:
 ```bash
+pip install the-well       # If not already installed via requirements
 the-well-download --base-path basedata --dataset supernova_explosion_64 --split train --first-only
 the-well-download --base-path basedata --dataset supernova_explosion_64 --split valid --first-only
 ```
