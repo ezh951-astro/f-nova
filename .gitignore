@@ -1,0 +1,8 @@
+__pycache__
+auxdata
+basedata
+inferred
+models
+plots
+slurm
+wandb
