@@ -1,5 +1,6 @@
 import argparse
 import yaml
+import os
 from pathlib import Path
 
 import wandb
@@ -84,7 +85,7 @@ def run( name,
     AllParams = GlobalParams(name)
 
     if data_path is not None:
-        AllParams.paths.base_data = data_path
+        AllParams.paths.base_data = os.path.expandvars(data_path)
 
     # dump restartfile
     with open(Path(AllParams.paths.models) / "params.yaml", "w") as f:
